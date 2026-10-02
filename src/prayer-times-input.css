@@ -1,0 +1,57 @@
+@import "tailwindcss" ;
+
+@font-face {
+    font-family: "zain";
+    src: url(../fonts/Zain/Zain-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "oleo";
+    src: url(../fonts/Oleo_Script/OleoScript-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "amiri";
+    src: url(../fonts/Amiri_Quran/AmiriQuran-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@theme {
+    --font-zain :"zain" , sans-serif;
+    --font-oleo : "oleo" , sans-serif;
+    --font-amiri : "amiri" , sans-serif ;
+}
+
+@utility btn{
+    @apply font-zain rounded-sm text-white bg-green-500 hover:bg-green-700 hover:scale-105 duration-150 p-1
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header" "optionContainer" "generateContainer" "resultContainer" "resultContainer" "footer";
+}
+
+@utility header{
+    grid-area : header ;
+}
+
+@utility optionContainer{
+    grid-area : optionContainer ;
+    justify-self : center ;
+}
+
+@utility generateContainer{
+    grid-area : generateContainer ;
+}
+
+@utility resultContainer{
+    grid-area: resultContainer;
+}
+
+@utility footer{
+    grid-area : footer;
+}
